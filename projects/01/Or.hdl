@@ -15,4 +15,16 @@ CHIP Or {
 
     PARTS:
     // Put your code here:
+    Not(in=a, out=banana);
+    Not(in=b, out=popcorn);
+    Nand(a=banana, b=popcorn, out=out);
 }
+
+/*
+   a | b || o || & | ^& | ^o | ^a | ^b
+  --------------------------------------
+   0 | 0 || 0 || 0 |  1 |  1 |  1 |  1
+   0 | 1 || 1 || 0 |  1 |  0 |  1 |  0
+   1 | 0 || 1 || 0 |  1 |  0 |  0 |  1
+   1 | 1 || 1 || 1 |  0 |  0 |  0 |  0
+*/
